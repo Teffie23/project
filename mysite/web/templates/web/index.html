@@ -1,0 +1,12 @@
+{% extends 'web/base.html' %}
+{% block content %}
+<h1>Сейчас доступны шкафчики:</h1>
+<ul>
+    {% for p in posts %}
+    <li>
+        <h2><a href="{{ p.get_absolute_url}}">{{p.id}}</a></h2>
+        <hr>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

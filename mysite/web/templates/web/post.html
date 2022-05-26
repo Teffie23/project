@@ -1,0 +1,9 @@
+{% extends 'web/base.html' %}
+{% block content %}
+<h1>{{posts.id}} Шкаф:Cвободен</h1>
+<h2>Вы спокойно сможите его использовать</h2>
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" name="bth" value="Использовать">
+</form>
+{% endblock %}
